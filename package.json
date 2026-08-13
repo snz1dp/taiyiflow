@@ -1,0 +1,14 @@
+{
+  "name": "taiyiflow-docs",
+  "version": "1.0.0",
+  "description": "太乙智启官方文档站",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev src",
+    "docs:build": "vitepress build src",
+    "docs:preview": "vitepress preview src"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
