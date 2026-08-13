@@ -1,8 +1,9 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 
 const basePath = process.env.VITEPRESS_BASE_PATH || '/'
 
-export default defineConfig({
+const baseConfig = defineConfig({
   title: '太乙智启',
   description: '太乙智启 — 多智能体与 RAG 应用开发平台官方文档',
   lang: 'zh-CN',
@@ -160,5 +161,27 @@ export default defineConfig({
     lastUpdated: {
       text: '最后更新于'
     }
+  }
+})
+
+export default withMermaid(baseConfig, {
+  mermaid: {
+    theme: 'default',
+    themeCSS: '.node rect { rx: 4; ry: 4; }'
+  },
+  copy: {
+    text: '复制',
+    successText: '已复制'
+  },
+  download: {
+    text: '下载',
+    successText: '已下载'
+  },
+  preview: {
+    text: '预览'
+  },
+  zoom: {
+    text: '缩放',
+    resetText: '重置'
   }
 })
