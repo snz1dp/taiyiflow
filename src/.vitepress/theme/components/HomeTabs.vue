@@ -11,7 +11,7 @@ const tabs = [
 const activeTab = ref('why')
 
 const advantages = [
-  { title: '自主可控', desc: '核心代码自主掌握，不受单一厂商锁定，满足信创与合规要求', icon: '🛡️' },
+  { title: '自主可控', desc: '核心代码自主研发，能力对标大厂，满足信创要求', icon: '🛡️' },
   { title: '模型不锁定', desc: '支持接入任意大模型（国产/国际），按任务灵活切换组合', icon: '🔀' },
   { title: '私有化部署', desc: '数据不出内网，支持 Docker / K8s / 离线环境部署', icon: '🏠' },
   { title: '多端覆盖', desc: '桌面客户端、Web、CLI 终端三种使用方式，覆盖所有角色', icon: '📱' },
@@ -102,7 +102,7 @@ const quickLinks = [
 .home-tabs {
   max-width: 1152px;
   margin: 0 auto;
-  padding: 1rem 1.5rem 3rem;
+  padding: 1rem 12px 0.75rem;
 }
 
 .tabs-header {

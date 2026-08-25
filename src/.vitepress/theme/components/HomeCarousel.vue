@@ -10,14 +10,9 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/hero-slides/slide-agents.png',
-    title: '多智能体协同',
-    subtitle: '多个 AI 智能体协作完成复杂任务，自主规划、分工执行'
-  },
-  {
-    image: '/hero-slides/slide-security.png',
-    title: '私有化部署 · 数据安全',
-    subtitle: '数据不出内网，满足信创与合规要求'
+    image: '/hero-slides/slide-workflow.png',
+    title: '业务流程自动化',
+    subtitle: '代码开发、文档处理、工单分类、审批辅助，释放人力'
   },
   {
     image: '/hero-slides/slide-multidevice.png',
@@ -25,9 +20,14 @@ const slides: Slide[] = [
     subtitle: '桌面客户端、Web、CLI 三种使用方式，覆盖所有角色'
   },
   {
-    image: '/hero-slides/slide-workflow.png',
-    title: '业务流程自动化',
-    subtitle: '文档处理、工单分类、审批辅助，释放人力'
+    image: '/hero-slides/slide-security.png',
+    title: '私有化部署 · 数据安全',
+    subtitle: '数据不出内网，满足信创与合规要求'
+  },
+  {
+    image: '/hero-slides/slide-agents.png',
+    title: '多智能体协同',
+    subtitle: '多个 AI 智能体协作完成复杂任务，自主规划、分工执行'
   }
 ]
 

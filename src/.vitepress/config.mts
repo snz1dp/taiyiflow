@@ -212,7 +212,7 @@ const baseConfig = defineConfig({
 
     footer: {
       message: '长沙慧码至一信息科技有限公司',
-      copyright: 'Copyright © 2024-present'
+      copyright: '版权所有 © 2026'
     },
 
     outline: {

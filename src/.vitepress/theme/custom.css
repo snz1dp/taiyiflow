@@ -105,11 +105,22 @@
   max-width: 100% !important;
 }
 
+/* ========== 首页底部与 Footer 间距收窄 ========== */
+.VPFooter {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.VPHome {
+  min-height: auto !important;
+  margin-bottom: 1rem !important;
+}
+
 /* ========== 首页内容区域 ========== */
 .home-content {
   max-width: 1152px;
   margin: 0 auto;
-  padding: 0 12px 2rem;
+  padding: 0 12px 0.5rem;
 }
 
 .home-content h2 {
