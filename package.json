@@ -9,6 +9,7 @@
     "docs:preview": "vitepress preview src"
   },
   "devDependencies": {
+    "@rollup/wasm-node": "^4.62.5",
     "vitepress": "^1.6.3"
   },
   "dependencies": {

@@ -1,0 +1,134 @@
+/**
+ * 太乙智启文档站主题色 — 与 taiyiflow-chatui 保持一致
+ * 来源: taiyiflow-chatui/src/css/quasar.variables.scss
+ *       taiyiflow-chatui/src/css/dark-theme.scss
+ */
+
+/* ========== 浅色模式 ========== */
+:root {
+  /* 品牌主色 (chatui $primary: #1976d2) */
+  --vp-c-brand-1: #1976d2;
+  --vp-c-brand-2: #1565c0;
+  --vp-c-brand-3: #0d47a1;
+  --vp-c-brand-soft: rgba(25, 118, 210, 0.14);
+
+  /* 品牌按钮 */
+  --vp-button-brand-bg: #1976d2;
+  --vp-button-brand-hover-bg: #1565c0;
+  --vp-button-brand-active-bg: #0d47a1;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-active-border: transparent;
+
+  /* 链接与强调 */
+  --vp-c-brand: #1976d2;
+
+  /* 提示块 (custom blocks) */
+  --vp-custom-block-tip-border: rgba(25, 118, 210, 0.35);
+  --vp-custom-block-tip-text: #1565c0;
+  --vp-custom-block-tip-bg: rgba(25, 118, 210, 0.08);
+
+  /* 代码高亮行高亮 */
+  --vp-code-line-highlight-color: rgba(25, 118, 210, 0.12);
+}
+
+/* ========== 深色模式 ========== */
+.dark {
+  /* 品牌主色在深色背景下适当提亮 */
+  --vp-c-brand-1: #5ba3e6;
+  --vp-c-brand-2: #42a5f5;
+  --vp-c-brand-3: #1976d2;
+  --vp-c-brand-soft: rgba(25, 118, 210, 0.2);
+
+  /* 品牌按钮 */
+  --vp-button-brand-bg: #1976d2;
+  --vp-button-brand-hover-bg: #1e88e5;
+  --vp-button-brand-active-bg: #1565c0;
+
+  /* 深色背景色 (chatui --ty-bg-primary: #222222) */
+  --vp-c-bg: #222222;
+  --vp-c-bg-alt: #1d1d1d;
+  --vp-c-bg-soft: #303030;
+  --vp-c-bg-mute: #303030;
+  --vp-c-bg-elv: #303030;
+
+  /* 深色文字 (chatui --ty-text-primary / --ty-text-secondary) */
+  --vp-c-text-1: #e0e0e0;
+  --vp-c-text-2: #a0a0a0;
+  --vp-c-text-3: #a0a0a0;
+
+  /* 深色边框 (chatui --ty-border-color: #424242) */
+  --vp-c-divider: #424242;
+  --vp-c-gutter: #424242;
+
+  /* 提示块深色适配 */
+  --vp-custom-block-tip-border: rgba(91, 163, 230, 0.35);
+  --vp-custom-block-tip-text: #5ba3e6;
+  --vp-custom-block-tip-bg: rgba(25, 118, 210, 0.12);
+}
+
+/* ========== 通用微调 ========== */
+
+/* 导航栏活跃链接下划线使用品牌色 */
+.VPNavBarMenuLink.active,
+.VPNavBarMenuGroup .active {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* 侧边栏活跃项 */
+.VPSidebarItem.is-active > .item .indicator {
+  background-color: var(--vp-c-brand-1);
+}
+
+/* 首页 Feature 卡片图标背景 */
+.VPFeature .icon {
+  background-color: var(--vp-c-brand-soft);
+}
+
+/* 搜索按钮聚焦色 */
+.DocSearch-Button:focus-visible {
+  outline-color: var(--vp-c-brand-1);
+}
+
+/* ========== 页面边距收窄 ========== */
+.VPContent .container {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.vp-doc {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.VPDoc .content-container {
+  max-width: 100% !important;
+}
+
+/* ========== 首页内容区域 ========== */
+.home-content {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 12px 2rem;
+}
+
+.home-content h2 {
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* 首页表格美化 */
+.home-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.home-content td,
+.home-content th {
+  padding: 0.6rem 0.8rem;
+}
+
+.home-content tr:hover {
+  background-color: var(--vp-c-bg-soft);
+}
