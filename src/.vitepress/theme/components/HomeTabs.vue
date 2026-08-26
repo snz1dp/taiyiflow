@@ -14,7 +14,7 @@ const advantages = [
   { title: '自主可控', desc: '核心代码自主研发，能力对标大厂，满足信创要求', icon: '🛡️' },
   { title: '模型不锁定', desc: '支持接入任意大模型（国产/国际），按任务灵活切换组合', icon: '🔀' },
   { title: '私有化部署', desc: '数据不出内网，支持 Docker / K8s / 离线环境部署', icon: '🏠' },
-  { title: '多端覆盖', desc: '桌面客户端、Web、CLI 终端三种使用方式，覆盖所有角色', icon: '📱' },
+  { title: '多端覆盖', desc: '桌面客户端、Web、小程序、CLI 终端多种使用方式，覆盖所有角色', icon: '📱' },
   { title: '开放集成', desc: 'SSE / WebSocket / REST / JS SDK 四种接入方式，5 分钟嵌入现有系统', icon: '🔌' },
   { title: '技能扩展', desc: '声明式技能包 + MCP 协议，能力边界持续扩展', icon: '🧩' }
 ]

@@ -163,17 +163,7 @@ taiyiflow-docs/src/
 │   ├── skill-repo.md                  #   技能仓库与发布
 │   └── best-practices.md              #   技能编写最佳实践
 │
-├── contributor-guide/                 # 🛠 第九部分：贡献者指南（给开源社区）
-│   ├── architecture.md                #   系统架构详解
-│   ├── dev-setup.md                   #   开发环境搭建
-│   ├── backend-dev.md                 #   后端开发指南
-│   ├── frontend-dev.md                #   前端开发指南
-│   ├── cli-dev.md                     #   CLI 开发指南
-│   ├── jssdk-dev.md                   #   JS SDK 开发指南
-│   ├── database-migration.md          #   数据库迁移
-│   └── coding-standards.md            #   编码规范与提交流程
-│
-└── reference/                         # 📚 第十部分：参考手册
+└── reference/                         # 📚 第九部分：参考手册
     ├── api/                           #   API 接口文档
     │   ├── stream.md                  #     流式对话接口
     │   ├── session.md                 #     会话分组接口
@@ -301,11 +291,7 @@ taiyiflow-docs/src/
 
 > 与现有结构一致，面向深度开发者，不做大的调整
 
-### 第九部分：贡献者指南（contributor-guide/）
-
-> 与现有结构一致，面向开源社区贡献者
-
-### 第十部分：参考手册（reference/）
+### 第九部分：参考手册（reference/）
 
 > 与现有结构一致，新增：
 > - `sla-and-support.md`：服务等级说明、技术支持渠道、社区资源
@@ -354,7 +340,6 @@ taiyiflow-docs/src/
 ```
 产品概览 | 快速上手 | 场景方案 | 使用指南 | 管理运维 | 集成开发 | 厂商指南 | 更多▾
                                                               ├─ 技能开发
-                                                              ├─ 贡献者指南
                                                               └─ 参考手册
 ```
 
@@ -363,7 +348,7 @@ taiyiflow-docs/src/
 | 原则 | 说明 |
 |------|------|
 | 前 5 项覆盖 90% 读者 | 企业用户和厂商最常访问的分区放前面 |
-| 深度内容折叠 | 技能开发、贡献者、参考手册收入"更多"下拉 |
+| 深度内容折叠 | 技能开发、参考手册收入"更多"下拉 |
 | 搜索优先 | 全局搜索入口突出，支持关键词直达 |
 
 ---
@@ -418,7 +403,7 @@ taiyiflow-docs/src/
 | admin-guide/* | admin-guide/* | 扩展安全、备份、升级内容 |
 | integration/* | integration/* | 基本保留，优化选型入口 |
 | skill-development/* | skill-development/* | 不变 |
-| contributor-guide/* | contributor-guide/* | 不变 |
+| contributor-guide/* | — | 已移除 |
 | reference/* | reference/* | 新增 SLA 文档 |
 | — | overview/（全新） | 新增产品概览 |
 | — | quick-start/（全新） | 新增角色分流快速上手 |
@@ -457,7 +442,7 @@ taiyiflow-docs/src/
 15. `user-guide/` 优化 + 新增 tips
 16. `admin-guide/` 剩余新增内容
 17. `reference/sla-and-support.md`
-18. 迁移并优化 `skill-development/`、`contributor-guide/`
+18. 迁移并优化 `skill-development/`、`reference/`
 
 ---
 
@@ -478,7 +463,6 @@ nav: [
     text: '更多',
     items: [
       { text: '技能开发', link: '/skill-development/skill-basics' },
-      { text: '贡献者指南', link: '/contributor-guide/architecture' },
       { text: '参考手册', link: '/reference/api/stream' }
     ]
   }

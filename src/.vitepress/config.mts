@@ -31,15 +31,10 @@ const baseConfig = defineConfig({
       { text: '场景方案', link: '/scenarios/intelligent-qa' },
       { text: '使用指南', link: '/user-guide/web-chat' },
       { text: '集成开发', link: '/integration/overview' },
-      { text: '厂商指南', link: '/vendor-guide/' },
-      {
-        text: '更多',
-        items: [
-          { text: '技能开发', link: '/skill-development/skill-basics' },
-          { text: '贡献者指南', link: '/contributor-guide/architecture' },
-          { text: '参考手册', link: '/reference/api/stream' }
-        ]
-      }
+      { text: '技能开发', link: '/skill-development/skill-basics' },
+      { text: '参考手册', link: '/reference/api/stream' },
+      { text: '开始对话', link: '/taiyif/chat', target: '_blank' },
+      { text: '软件下载', link: '/taiyif/bundles/', target: '_blank' }
     ],
 
     sidebar: {
@@ -133,9 +128,37 @@ const baseConfig = defineConfig({
             { text: '技能注入机制', link: '/integration/skill-injection' },
             { text: '集成代码示例', link: '/integration/examples' }
           ]
+        },
+        {
+          text: '厂商指南',
+          items: [
+            { text: '厂商合作总览', link: '/vendor-guide/' },
+            { text: '基于太乙智启构建产品', link: '/vendor-guide/product-building' },
+            { text: '多租户架构', link: '/vendor-guide/multi-tenancy' },
+            { text: '白标定制', link: '/vendor-guide/white-label' },
+            { text: '计费与配额管理', link: '/vendor-guide/billing-and-quota' },
+            { text: 'OEM 分发与授权', link: '/vendor-guide/oem-distribution' },
+            { text: '集成最佳实践', link: '/vendor-guide/best-practices' },
+            { text: '厂商案例', link: '/vendor-guide/case-studies' }
+          ]
         }
       ],
       '/vendor-guide/': [
+        {
+          text: '集成开发',
+          items: [
+            { text: '集成方式选型', link: '/integration/overview' },
+            { text: '核心概念', link: '/integration/concepts' },
+            { text: '认证与鉴权', link: '/integration/authentication' },
+            { text: '流式对话 API（SSE）', link: '/integration/stream-api' },
+            { text: 'WebSocket 接口', link: '/integration/websocket-api' },
+            { text: 'REST API 参考', link: '/integration/rest-api' },
+            { text: 'JS SDK 集成', link: '/integration/jssdk' },
+            { text: '客户端工具协议', link: '/integration/client-tool-protocol' },
+            { text: '技能注入机制', link: '/integration/skill-injection' },
+            { text: '集成代码示例', link: '/integration/examples' }
+          ]
+        },
         {
           text: '厂商指南',
           items: [
@@ -164,21 +187,7 @@ const baseConfig = defineConfig({
           ]
         }
       ],
-      '/contributor-guide/': [
-        {
-          text: '贡献者指南',
-          items: [
-            { text: '系统架构总览', link: '/contributor-guide/architecture' },
-            { text: '开发环境搭建', link: '/contributor-guide/dev-setup' },
-            { text: '后端开发指南', link: '/contributor-guide/backend-dev' },
-            { text: '前端开发指南', link: '/contributor-guide/frontend-dev' },
-            { text: 'CLI 开发指南', link: '/contributor-guide/cli-dev' },
-            { text: 'JS SDK 开发指南', link: '/contributor-guide/jssdk-dev' },
-            { text: '数据库迁移', link: '/contributor-guide/database-migration' },
-            { text: '编码规范与提交流程', link: '/contributor-guide/coding-standards' }
-          ]
-        }
-      ],
+
       '/reference/': [
         {
           text: '参考手册',

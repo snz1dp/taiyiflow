@@ -17,7 +17,7 @@ const slides: Slide[] = [
   {
     image: '/hero-slides/slide-multidevice.png',
     title: '多端覆盖',
-    subtitle: '桌面客户端、Web、CLI 三种使用方式，覆盖所有角色'
+    subtitle: '桌面客户端、Web、小程序、CLI 多种使用方式，覆盖所有角色'
   },
   {
     image: '/hero-slides/slide-security.png',

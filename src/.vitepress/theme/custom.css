@@ -143,3 +143,13 @@
 .home-content tr:hover {
   background-color: var(--vp-c-bg-soft);
 }
+
+/* ========== 全局表格全宽 ========== */
+.vp-doc table {
+  width: 100% !important;
+}
+
+.vp-doc .table-container {
+  width: 100% !important;
+  overflow-x: visible !important;
+}

@@ -1,6 +1,6 @@
 # 太乙智启文档站规划方案
 
-> 项目目录：`taiyiflow-docs` | 技术方案：VitePress | 面向读者：用户 → 管理员 → 集成开发者 → 技能开发者 → 平台贡献者
+> 项目目录：`taiyiflow-docs` | 技术方案：VitePress | 面向读者：用户 → 管理员 → 集成开发者 → 技能开发者
 
 ---
 
@@ -70,17 +70,7 @@ taiyiflow-docs/
 │   │   ├── skill-repo.md              #   技能仓库与发布
 │   │   └── best-practices.md          #   技能编写最佳实践
 │   │
-│   ├── contributor-guide/             # 🛠 第六部分：贡献者指南
-│   │   ├── architecture.md            #   系统架构总览
-│   │   ├── dev-setup.md               #   开发环境搭建
-│   │   ├── backend-dev.md             #   后端开发指南
-│   │   ├── frontend-dev.md            #   前端开发指南（chatui/dashweb）
-│   │   ├── cli-dev.md                 #   CLI 开发指南
-│   │   ├── jssdk-dev.md               #   JS SDK 开发指南
-│   │   ├── database-migration.md      #   数据库迁移
-│   │   └── coding-standards.md        #   编码规范与提交流程
-│   │
-│   └── reference/                     # 📚 第七部分：参考手册
+│   └── reference/                     # 📚 第六部分：参考手册
 │       ├── api/                       #   API 接口文档
 │       │   ├── stream.md              #     流式对话接口
 │       │   ├── session.md             #     会话分组接口
@@ -160,20 +150,7 @@ taiyiflow-docs/
 | skill-repo.md | 技能仓库、发布、版本管理 | taiyiflow-cli 远程技能仓库 |
 | best-practices.md | 技能编写最佳实践与模板 | 需编写 |
 
-### 第六部分：贡献者指南（contributor-guide）
-
-| 文档 | 核心内容 | 素材来源 |
-|------|----------|----------|
-| architecture.md | 系统架构图、组件关系、数据流 | 需绘制 |
-| dev-setup.md | 各平台开发环境搭建 | taiyiflow README、DEVELOPMENT.md |
-| backend-dev.md | 后端目录结构、API 开发、调试 | DEVELOPMENT.md、src/backend |
-| frontend-dev.md | chatui/dashweb 前端开发 | 两个前端 README |
-| cli-dev.md | CLI 构建、调试、发布 | taiyiflow-cli README |
-| jssdk-dev.md | JSSDK 开发、测试、构建 | taiyiflow-jssdk README |
-| database-migration.md | Alembic 数据库迁移流程 | DEVELOPMENT.md |
-| coding-standards.md | 编码规范、Git 提交规范、CI/CD | CONTRIBUTING.md |
-
-### 第七部分：参考手册（reference）
+### 第六部分：参考手册（reference）
 
 | 文档 | 核心内容 | 素材来源 |
 |------|----------|----------|
@@ -200,9 +177,8 @@ taiyiflow-docs/
 7. `integration/` — 集成开发剩余 7 篇
 8. `skill-development/` — 技能开发全部 7 篇
 
-### 🔵 第四批（贡献者 & 参考）
-9. `contributor-guide/` — 贡献者指南全部 8 篇
-10. `reference/` — 参考手册全部
+### 🔵 第四批（参考）
+9. `reference/` — 参考手册全部
 
 ---
 
@@ -224,7 +200,7 @@ taiyiflow-docs/
 
 - **框架**：VitePress（与 taiyiflow-jssdk 文档站保持一致的技术选型）
 - **搜索**：内置本地搜索（`vitepress-plugin-search`）或 Algolia DocSearch
-- **导航**：顶部导航按读者角色分区（用户 / 管理员 / 开发者 / 贡献者）
+- **导航**：顶部导航按读者角色分区（用户 / 管理员 / 开发者）
 - **侧边栏**：按上述目录结构自动生成
 - **品牌**：自定义主题色，与太乙智启产品视觉一致
 - **部署**：支持 Docker 镜像发布 + GitHub Pages 双渠道（参考 jssdk 方案）
