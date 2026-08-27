@@ -29,7 +29,7 @@ const baseConfig = defineConfig({
       { text: '产品概览', link: '/overview/what-is-taiyiflow' },
       { text: '快速上手', link: '/quick-start/' },
       { text: '场景方案', link: '/scenarios/intelligent-qa' },
-      { text: '使用指南', link: '/user-guide/web-chat' },
+
       { text: '集成开发', link: '/integration/overview' },
       { text: '技能开发', link: '/skill-development/skill-basics' },
       { text: '参考手册', link: '/reference/api/stream' },
@@ -73,46 +73,7 @@ const baseConfig = defineConfig({
           ]
         }
       ],
-      '/user-guide/': [
-        {
-          text: '使用指南',
-          items: [
-            { text: 'Web 对话界面', link: '/user-guide/web-chat' },
-            { text: '桌面客户端', link: '/user-guide/desktop-app' },
-            { text: 'CLI 命令行工具', link: '/user-guide/cli-guide' },
-            { text: '技能使用', link: '/user-guide/skills-usage' },
-            { text: '知识库问答', link: '/user-guide/knowledge-base' },
-            { text: '语音对话', link: '/user-guide/voice-interaction' },
-            { text: '文件处理', link: '/user-guide/file-handling' },
-            { text: '高效使用技巧', link: '/user-guide/tips-and-tricks' },
-            { text: '常见问题', link: '/user-guide/faq' }
-          ]
-        }
-      ],
-      '/admin-guide/': [
-        {
-          text: '管理运维',
-          items: [
-            {
-              text: '部署专题',
-              items: [
-                { text: '部署规划', link: '/admin-guide/deployment/planning' },
-                { text: 'Docker 部署', link: '/admin-guide/deployment/docker-deploy' },
-                { text: 'Kubernetes 部署', link: '/admin-guide/deployment/k8s-deploy' },
-                { text: '离线 / 内网部署', link: '/admin-guide/deployment/air-gap-deploy' }
-              ]
-            },
-            { text: '用户与权限管理', link: '/admin-guide/user-management' },
-            { text: '大模型接入与配额', link: '/admin-guide/model-config' },
-            { text: '可视化流程设计器', link: '/admin-guide/flow-designer' },
-            { text: '知识库管理', link: '/admin-guide/knowledge-management' },
-            { text: '安全配置', link: '/admin-guide/security' },
-            { text: '监控与告警', link: '/admin-guide/monitoring' },
-            { text: '备份与恢复', link: '/admin-guide/backup-and-recovery' },
-            { text: '版本升级', link: '/admin-guide/upgrade' }
-          ]
-        }
-      ],
+
       '/integration/': [
         {
           text: '集成开发',
