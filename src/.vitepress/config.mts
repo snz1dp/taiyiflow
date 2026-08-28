@@ -10,6 +10,7 @@ const baseConfig = defineConfig({
   base: basePath,
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
 
   vite: {
     optimizeDeps: {
