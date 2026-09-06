@@ -87,7 +87,9 @@ onUnmounted(() => {
           :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
         >
           <div v-for="(slide, idx) in slides" :key="idx" class="carousel-slide">
-            <img :src="withBase(slide.image)" :alt="slide.title" loading="lazy" />
+            <a :href="withBase('/overview/what-is-taiyiflow')" :title="`了解${slide.title}`">
+              <img :src="withBase(slide.image)" :alt="slide.title" loading="lazy" />
+            </a>
           </div>
         </div>
 
@@ -154,6 +156,12 @@ onUnmounted(() => {
 
 .carousel-slide {
   min-width: 100%;
+  height: 100%;
+}
+
+.carousel-slide a {
+  display: block;
+  width: 100%;
   height: 100%;
 }
 
