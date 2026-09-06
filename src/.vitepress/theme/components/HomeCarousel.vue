@@ -129,8 +129,7 @@ onUnmounted(() => {
 
 <style scoped>
 .home-carousel {
-  padding: 0.5rem 1.5rem 1.5rem;
-  max-width: 1152px;
+  padding: 0.5rem 12px 1rem;
   margin: 0 auto;
 }
 

@@ -100,7 +100,6 @@ const quickLinks = [
 
 <style scoped>
 .home-tabs {
-  max-width: 1152px;
   margin: 0 auto;
   padding: 1rem 12px 0.75rem;
 }

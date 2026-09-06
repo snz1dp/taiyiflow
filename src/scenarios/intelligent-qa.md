@@ -113,7 +113,7 @@ graph TD
 
 ## 相关文档
 
-- [知识库管理](/admin-guide/knowledge-management) — 文档上传与向量化配置
-- [流程设计器](/admin-guide/flow-designer) — 可视化搭建问答流程
+- [知识库管理](/user-guide/knowledge-base) — 文档上传与向量化配置
+- [自定义场景搭建](/scenarios/custom-scenario) — 可视化搭建问答流程
 - [流式对话 API](/integration/stream-api) — 集成到现有系统
 - [JS SDK](/integration/jssdk) — 嵌入 Web 页面

@@ -29,9 +29,10 @@ const baseConfig = defineConfig({
     nav: [
       { text: '产品概览', link: '/overview/what-is-taiyiflow' },
       { text: '快速上手', link: '/quick-start/' },
-      { text: '场景方案', link: '/scenarios/intelligent-qa' },
+      { text: '场景方案', link: '/scenarios/' },
 
       { text: '集成开发', link: '/integration/overview' },
+      { text: '厂商指南', link: '/vendor-guide/' },
       { text: '技能开发', link: '/skill-development/skill-basics' },
       { text: '参考手册', link: '/reference/api/stream' },
       { text: '开始对话', link: '/taiyif/chat', target: '_blank' },
@@ -65,11 +66,16 @@ const baseConfig = defineConfig({
         {
           text: '场景方案',
           items: [
+            { text: '场景方案总览', link: '/scenarios/' },
             { text: '企业知识问答 / 智能客服', link: '/scenarios/intelligent-qa' },
             { text: '文档处理与报告生成', link: '/scenarios/document-processing' },
             { text: '业务流程自动化', link: '/scenarios/workflow-automation' },
             { text: '研发效能提升', link: '/scenarios/dev-assistant' },
             { text: '数据分析与洞察', link: '/scenarios/data-analysis' },
+            { text: '会议纪要与语音助手', link: '/scenarios/meeting-voice-assistant' },
+            { text: '营销内容生成', link: '/scenarios/content-marketing' },
+            { text: '办公自动化 RPA', link: '/scenarios/office-rpa' },
+            { text: '定时报告与监控播报', link: '/scenarios/scheduled-reports' },
             { text: '自定义场景搭建', link: '/scenarios/custom-scenario' }
           ]
         }
@@ -79,16 +85,44 @@ const baseConfig = defineConfig({
         {
           text: '集成开发',
           items: [
-            { text: '集成方式选型', link: '/integration/overview' },
-            { text: '核心概念', link: '/integration/concepts' },
+            { text: '集成方式总览', link: '/integration/overview' }
+          ]
+        },
+        {
+          text: '一、业务层',
+          collapsed: false,
+          items: [
+            { text: '集成核心概念', link: '/integration/concepts' }
+          ]
+        },
+        {
+          text: '二、应用层',
+          collapsed: false,
+          items: [
+            { text: 'JS SDK 集成', link: '/integration/jssdk' },
+            { text: 'ChatUI 前端集成与二次开发', link: '/integration/chatui' },
+            { text: '集成代码示例', link: '/integration/examples' }
+          ]
+        },
+        {
+          text: '三、协议层',
+          collapsed: false,
+          items: [
             { text: '认证与鉴权', link: '/integration/authentication' },
             { text: '流式对话 API（SSE）', link: '/integration/stream-api' },
             { text: 'WebSocket 接口', link: '/integration/websocket-api' },
-            { text: 'REST API 参考', link: '/integration/rest-api' },
-            { text: 'JS SDK 集成', link: '/integration/jssdk' },
             { text: '客户端工具协议', link: '/integration/client-tool-protocol' },
             { text: '技能注入机制', link: '/integration/skill-injection' },
-            { text: '集成代码示例', link: '/integration/examples' }
+            { text: 'REST API 参考', link: '/integration/rest-api' }
+          ]
+        },
+        {
+          text: '四、底层实现',
+          collapsed: true,
+          items: [
+            { text: '后端平台架构解析', link: '/internals/backend-architecture' },
+            { text: 'JS SDK 内部实现', link: '/internals/jssdk-internals' },
+            { text: 'ChatUI 内部实现', link: '/internals/chatui-internals' }
           ]
         },
         {
@@ -105,20 +139,48 @@ const baseConfig = defineConfig({
           ]
         }
       ],
+      '/internals/': [
+        {
+          text: '底层实现',
+          items: [
+            { text: '后端平台架构解析', link: '/internals/backend-architecture' },
+            { text: 'JS SDK 内部实现', link: '/internals/jssdk-internals' },
+            { text: 'ChatUI 内部实现', link: '/internals/chatui-internals' }
+          ]
+        },
+        {
+          text: '返回集成开发',
+          items: [
+            { text: '集成方式总览', link: '/integration/overview' },
+            { text: '集成核心概念', link: '/integration/concepts' },
+            { text: 'REST API 参考', link: '/integration/rest-api' }
+          ]
+        }
+      ],
       '/vendor-guide/': [
         {
           text: '集成开发',
           items: [
-            { text: '集成方式选型', link: '/integration/overview' },
-            { text: '核心概念', link: '/integration/concepts' },
+            { text: '集成方式总览', link: '/integration/overview' },
+            { text: '集成核心概念', link: '/integration/concepts' },
+            { text: 'JS SDK 集成', link: '/integration/jssdk' },
+            { text: 'ChatUI 前端集成与二次开发', link: '/integration/chatui' },
+            { text: '集成代码示例', link: '/integration/examples' },
             { text: '认证与鉴权', link: '/integration/authentication' },
             { text: '流式对话 API（SSE）', link: '/integration/stream-api' },
             { text: 'WebSocket 接口', link: '/integration/websocket-api' },
-            { text: 'REST API 参考', link: '/integration/rest-api' },
-            { text: 'JS SDK 集成', link: '/integration/jssdk' },
             { text: '客户端工具协议', link: '/integration/client-tool-protocol' },
             { text: '技能注入机制', link: '/integration/skill-injection' },
-            { text: '集成代码示例', link: '/integration/examples' }
+            { text: 'REST API 参考', link: '/integration/rest-api' }
+          ]
+        },
+        {
+          text: '底层实现',
+          collapsed: true,
+          items: [
+            { text: '后端平台架构解析', link: '/internals/backend-architecture' },
+            { text: 'JS SDK 内部实现', link: '/internals/jssdk-internals' },
+            { text: 'ChatUI 内部实现', link: '/internals/chatui-internals' }
           ]
         },
         {

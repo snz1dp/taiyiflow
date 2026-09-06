@@ -26,7 +26,7 @@
 | **对话前端**（taiyiflow-chatui） | 桌面客户端 & Web 对话界面 | 所有用户 |
 | **管理前端**（dashweb） | 可视化流程设计器、用户/模型/知识库管理 | 管理员、流程设计者 |
 | **CLI 客户端**（taiyiflow-cli） | 终端智能体工具，面向开发者 | 开发者 |
-| **JS SDK**（taiyiflow-jssdk） | Web 页面嵌入式集成 SDK | 前端集成开发者 |
+| **JS SDK**（taiyiflow-jssdk） | Web 页面嵌入式集成 SDK | 业务开发者 |
 
 ## 核心特性
 

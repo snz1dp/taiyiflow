@@ -162,21 +162,155 @@ async function chat(message) {
 chat('你好，请介绍一下自己')
 ```
 
-### 使用 JS SDK（推荐）
+### 使用 JS SDK（Web 页面嵌入，推荐）
+
+JS SDK 不直接访问后端 API，而是把对话页装入 iframe，登录态由平台侧建立，因此**无需传 API Key**：
 
 ```javascript
-import TaiyiSDK from 'taiyiflow-jssdk'
+import TaiyiSDK from 'taiyiflow'
 
 const sdk = new TaiyiSDK({
-  agentUrl: 'http://localhost:7860',
-  apiKey: 'your-api-key'
+  agentUrl: 'https://your-platform/taiyi/chat/your-flow-id',
+  origin: 'https://your-platform'
 })
 
-sdk.on('message', (data) => {
-  console.log('AI:', data.text)
+// 注册一个宿主页面工具，让智能体可以调用
+sdk.registerTool('demo-server', {
+  name: 'get_current_time',
+  description: '获取当前时间。当用户询问现在几点、今天日期时使用。',
+  input_schema: { type: 'object', properties: {} },
+  handler: async () => new Date().toISOString()
 })
 
+sdk.on('agent:ready', () => {
+  console.log('智能体已就绪')
+})
+
+// 打开对话框并发起提问
 sdk.chat('你好，请介绍一下自己')
+```
+
+完整参数与 API 见 [JS SDK 集成](/integration/jssdk)。
+
+---
+
+## WebSocket 示例
+
+### Python（websockets）
+
+```python
+import asyncio, json, websockets
+
+async def run_flow_ws(flow_id: str, token: str, input_value: str):
+    uri = f"ws://localhost:7860/api/v1/run/{flow_id}/websocket"
+    headers = {"Authorization": f"Bearer {token}"}
+
+    async with websockets.connect(uri, additional_headers=headers) as ws:
+        # 连接后 10 秒内发送第一条消息
+        await ws.send(json.dumps({"input_value": input_value}))
+
+        async for message in ws:
+            data = json.loads(message)
+            if data["event"] == "message":
+                print(data["data"].get("chunk", ""), end="", flush=True)
+            elif data["event"] == "close":
+                print("\n--- 输出完成 ---")
+                break
+            elif data["event"] == "error":
+                print(f"\n错误: {data['data']['error']}")
+                break
+
+asyncio.run(run_flow_ws("my-flow", "your-api-key", "你好"))
+```
+
+---
+
+## 客户端工具回调示例（Python）
+
+演示完整闭环：声明工具 → 消费 SSE → 检测工具调用 → 本地执行 → 回调结果。
+
+```python
+import json
+import uuid
+import requests
+
+API_BASE = 'http://localhost:7860'
+API_KEY = 'your-api-key'
+FLOW_ID = 'my-flow'
+HEADERS = {'x-api-key': API_KEY, 'Content-Type': 'application/json'}
+
+# 1. 本地工具实现
+def get_weather(city: str) -> dict:
+    return {'city': city, 'weather': '晴', 'temperature': '26°C'}
+
+LOCAL_TOOLS = {'get_weather': get_weather}
+
+# 2. 发起对话，声明客户端工具
+payload = {
+    'input_value': '北京今天天气怎么样？',
+    'request_type': 'agent',
+    'session_id': str(uuid.uuid4()),
+    'client_mcp_servers': {
+        'weather-server': {
+            'tools': [{
+                'name': 'get_weather',
+                'description': '查询指定城市的实时天气。当用户询问天气时使用。',
+                'input_schema': {
+                    'type': 'object',
+                    'properties': {'city': {'type': 'string', 'description': '城市名'}},
+                    'required': ['city'],
+                },
+            }]
+        }
+    },
+}
+
+response = requests.post(
+    f'{API_BASE}/api/v1/run/{FLOW_ID}/stream',
+    headers=HEADERS, json=payload, stream=True,
+)
+
+# 3. 消费 SSE，检测工具调用并回调
+event = None
+for line in response.iter_lines(decode_unicode=True):
+    if not line:
+        event = None
+        continue
+    if line.startswith('event: '):
+        event = line[7:]
+    elif line.startswith('data: ') and event == 'message':
+        data = json.loads(line[6:])
+
+        if data.get('event_type') == 'client_tool':
+            # 4. 本地执行工具
+            fn = data['function']
+            handler = LOCAL_TOOLS.get(fn['name'].removeprefix('c_'))
+            try:
+                result = handler(**fn['arguments'])
+                success, error = True, None
+            except Exception as exc:
+                result, success, error = None, False, str(exc)
+
+            # 5. 回调结果（失败也必须回调）
+            requests.post(
+                f'{API_BASE}/api/v1/agents/client/call/result',
+                headers=HEADERS,
+                json={
+                    'flow_id': data['flow_id'],
+                    'session_id': data['context'].get('session_id'),
+                    'message_id': data['context'].get('message_id'),
+                    'run_id': data['context']['run_id'],
+                    'call_id': fn['id'],
+                    'success': success,
+                    'result': result,
+                    'error_message': error,
+                },
+            )
+        elif 'chunk' in data:
+            print(data['chunk'], end='', flush=True)
+        elif data.get('message') == 'over':
+            print('\n--- 完成 ---')
+            break
 ```
 
 ---
@@ -188,3 +322,5 @@ sdk.chat('你好，请介绍一下自己')
 | 客户端工具回调 | [客户端工具协议](/integration/client-tool-protocol) |
 | 技能注入 | [技能注入机制](/integration/skill-injection) |
 | WebSocket 实时通信 | [WebSocket 接口](/integration/websocket-api) |
+| Web 页面嵌入 | [JS SDK 集成](/integration/jssdk) |
+| 部署完整对话前端 | [ChatUI 前端集成与二次开发](/integration/chatui) |
