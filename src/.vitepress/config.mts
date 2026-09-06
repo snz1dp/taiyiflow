@@ -35,8 +35,10 @@ const baseConfig = defineConfig({
       { text: '厂商指南', link: '/vendor-guide/' },
       { text: '技能开发', link: '/skill-development/skill-basics' },
       { text: '参考手册', link: '/reference/api/stream' },
-      { text: '开始对话', link: '/taiyif/chat', target: '_blank' },
-      { text: '软件下载', link: '/taiyif/bundles/', target: '_blank' }
+      // 「开始对话」「软件下载」指向站点根目录下的其它服务，
+      // 不能走普通 link（会被 withBase 拼上 /taiyi/docs/），故用自定义组件渲染原生 <a>
+      { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyif/chat' } },
+      { component: 'RootNavLink', props: { text: '软件下载', href: '/taiyif/bundles/' } }
     ],
 
     sidebar: {
