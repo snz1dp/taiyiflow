@@ -50,7 +50,7 @@ deploy:
 
 # 使用 snz1dpctl 构建并推送
 release:
-	snz1dpctl make build publish
+	snz1dpctl make publish
 
 # ============================================================
 # 清理

@@ -10,7 +10,9 @@ COPY . .
 RUN apk add --no-cache git
 
 RUN npm config set registry https://registry.npmmirror.com/
-RUN npm install && VITEPRESS_BASE_PATH=/taiyi/docs/ npm run docs:build
+# 使用 npm ci 按 lock 文件干净安装，确保 esbuild 等原生依赖安装的是 linux/musl 平台二进制
+# NODE_OPTIONS 提升堆上限，避免构建时内存不足导致 esbuild 子进程被杀（EPIPE）
+RUN npm ci && NODE_OPTIONS=--max-old-space-size=4096 VITEPRESS_BASE_PATH=/taiyi/docs/ npm run docs:build
 
 
 # ============================================================
