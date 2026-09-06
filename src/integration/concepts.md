@@ -124,7 +124,7 @@ App 通过 `user_scope` 控制可见范围：
 | client_type | 形态 | 说明 |
 |-------------|------|------|
 | `web` | 浏览器 | ChatUI Web 版、JS SDK 嵌入页 |
-| `desktop` | Electron 桌面端 | ChatUI 桌面版，具备完整本地工具能力 |
+| `desktop` | 桌面端 | ChatUI 桌面版，具备完整本地工具能力 |
 | `cli` | 命令行 | taiyiflow-cli |
 | `device` | 硬件设备 | 语音终端等受限设备 |
 

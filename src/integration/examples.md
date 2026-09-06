@@ -323,4 +323,4 @@ for line in response.iter_lines(decode_unicode=True):
 | 技能注入 | [技能注入机制](/integration/skill-injection) |
 | WebSocket 实时通信 | [WebSocket 接口](/integration/websocket-api) |
 | Web 页面嵌入 | [JS SDK 集成](/integration/jssdk) |
-| 部署完整对话前端 | [ChatUI 前端集成与二次开发](/integration/chatui) |
+| 部署完整对话前端 | [智能体前端集成与二次开发](/integration/chatui) |

@@ -65,3 +65,13 @@ graph LR
 | 启用 | `skills enable <name>` | `/skills` 中操作 |
 | 禁用 | `skills disable <name>` | `/skills` 中操作 |
 | 远程安装 | `skills install <name>` | `/skills` 远程标签页 |
+
+## 技能的三种生产方式
+
+| 方式 | 说明 | 文档 |
+|------|------|------|
+| 手写 | 直接编写 SKILL.md，适合知识型技能 | [SKILL.md 编写规范](/skill-development/skill-format) |
+| 录制固化 | 应用内浏览器录制操作，AI 归纳生成技能包 | [浏览器录制固化技能](/skill-development/browser-recording-skill) |
+| 对话生成 | 让 AI 通过 `skill_create` 工具在对话中创建技能 | [客户端工具开发](/skill-development/client-tools) |
+
+无论哪种方式产出，技能都遵循上述同一套生命周期：落盘 → 发现 → 加载 → 注入 → 消费。

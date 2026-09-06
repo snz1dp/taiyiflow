@@ -50,3 +50,4 @@ name: 代码审查助手
 
 - [SKILL.md 编写规范](/skill-development/skill-format) — 学习如何编写技能
 - [技能生命周期](/skill-development/skill-lifecycle) — 了解技能从发现到生效的完整流程
+- [浏览器录制固化技能](/skill-development/browser-recording-skill) — 不写一行代码，操作一遍生成技能

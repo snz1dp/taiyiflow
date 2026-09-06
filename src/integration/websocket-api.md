@@ -173,7 +173,7 @@ asyncio.run(run_flow_ws("your-flow-id", "your-token", "你好"))
 | `sse`（默认） | `POST /api/v1/run/{flow_id_or_name}/stream` |
 | `websocket` | `WS /api/v1/run/{flow_id_or_name}/websocket` |
 
-ChatUI 的取值逻辑：Electron 端优先用户本地偏好，其次服务端配置；Web 端直接使用服务端配置。
+ChatUI 的取值逻辑：桌面端优先用户本地偏好，其次服务端配置；Web 端直接使用服务端配置。
 
 ### 注意事项
 

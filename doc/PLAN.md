@@ -9,7 +9,7 @@
 | 组件 | 仓库目录 | 技术栈 | 定位 |
 |------|----------|--------|------|
 | 后端服务 | `taiyiflow` | Python / FastAPI / SQLModel | 核心引擎：Agent 编排、RAG、流式对话、MCP 协议 |
-| 对话前端 | `taiyiflow-chatui` | Quasar2 + Electron | 桌面客户端 & Web 对话界面 |
+| 对话前端 | `taiyiflow-chatui` | Quasar2 | 桌面客户端 & Web 对话界面 |
 | 管理前端 | `dashweb` | Quasar2 | 可视化流程设计器、用户/模型/知识库管理 |
 | CLI 客户端 | `taiyiflow-cli` | Go / Bubble Tea TUI | 终端智能体客户端 |
 | JS SDK | `taiyiflow-jssdk` | JavaScript / Vite | Web 页面嵌入式集成 SDK |
@@ -97,14 +97,14 @@ taiyiflow-docs/
 |------|----------|----------|
 | introduction.md | 产品定位、五大组件简介、适用场景 | taiyiflow README、产品定位描述 |
 | core-concepts.md | Agent、Flow、技能（Skill）、MCP、RAG、会话（Session）等概念通俗解释 | 流式对话接口文档、JSSDK README |
-| installation.md | 桌面客户端安装、Web 部署、CLI 安装、Docker 部署 | chatui README（Electron 构建）、taiyiflow INSTALL.md |
+| installation.md | 桌面客户端安装、Web 部署、CLI 安装、Docker 部署 | chatui README（桌面端构建）、taiyiflow INSTALL.md |
 | first-conversation.md | 从打开应用到完成第一次 AI 对话的分步教程 | 需实操截图补充 |
 
 ### 第二部分：用户指南（user-guide）
 
 | 文档 | 核心内容 | 素材来源 |
 |------|----------|----------|
-| desktop-app.md | 桌面客户端功能、快捷键、设置 | chatui Electron 相关代码与文档 |
+| desktop-app.md | 桌面客户端功能、快捷键、设置 | chatui 桌面端相关代码与文档 |
 | web-chat.md | Web 对话界面功能、Markdown 渲染、文件预览 | chatui docs/arch/ 下文档 |
 | cli-guide.md | CLI 安装、登录、对话、任务管理、配置 | taiyiflow-cli README |
 | skills-usage.md | 技能列表查看、启用/禁用、远程仓库安装 | taiyiflow-cli 技能章节 |

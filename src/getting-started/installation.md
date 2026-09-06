@@ -15,7 +15,7 @@
 
 ## 方式一：桌面客户端（推荐新手）
 
-桌面客户端基于 Electron 构建，内置了 CLI 工具、Python 3.12 和 Node 22 运行时，开箱即用。
+桌面客户端内置了 CLI 工具、Python 3.12 和 Node 22 运行时，开箱即用。
 
 ### 下载
 
@@ -181,7 +181,7 @@ conda install -c conda-forge libopus -y
 
 然后将 Conda 环境中的 `opus.dll` 复制到 `.venv\Scripts` 目录下。
 
-**Q：Electron 构建出现 OOM？**
+**Q：桌面端构建出现 OOM？**
 
 设置环境变量：`NODE_OPTIONS="--max-old-space-size=8192"`
 

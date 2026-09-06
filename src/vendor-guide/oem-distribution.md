@@ -15,7 +15,7 @@ graph TB
     subgraph DELIVERY["交付到客户环境的组件"]
         BE["后端服务（FastAPI）"]
         FE["管理后台 + ChatUI Web"]
-        DESK["Electron 桌面端安装包"]
+        DESK["桌面端安装包"]
         WORKER["Celery Worker / Flower"]
         MODEL["本地模型（可选）"]
         DEP["PostgreSQL / Milvus / Redis"]

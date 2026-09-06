@@ -232,7 +232,7 @@ stateDiagram-v2
 | 权限声明 | 工具 `meta.permissions` 声明所需权限，执行前逐项申请 |
 | 审计日志 | 记录每次工具调用的参数与结果 |
 
-ChatUI 桌面端在 `src-electron/agent-runtime/security.js` 实现了完整的审批与沙箱体系；JS SDK 通过 `PermissionManager` + `SecurityPolicy` + `AuditLogger` 提供浏览器侧的权限控制（`enableSecurity: true` 开启）。
+ChatUI 桌面端内置了完整的审批与沙箱体系；JS SDK 提供浏览器侧的权限控制（`enableSecurity: true` 开启），涵盖权限申请、安全策略与审计日志。
 
 ## 错误处理清单
 

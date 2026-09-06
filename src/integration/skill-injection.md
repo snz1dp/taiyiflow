@@ -238,4 +238,3 @@ metadata:
 - [SKILL.md 编写规范](/skill-development/skill-format) — 编写技能
 - [技能生命周期](/skill-development/skill-lifecycle) — 从编写到分发
 - [JS SDK 集成](/integration/jssdk) — SDK 技能供应 API
-- [后端平台架构解析](/internals/backend-architecture) — 技能解析的源码实现

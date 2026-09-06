@@ -100,7 +100,7 @@ const baseConfig = defineConfig({
           collapsed: false,
           items: [
             { text: 'JS SDK 集成', link: '/integration/jssdk' },
-            { text: 'ChatUI 前端集成与二次开发', link: '/integration/chatui' },
+            { text: '智能体前端集成与二次开发', link: '/integration/chatui' },
             { text: '集成代码示例', link: '/integration/examples' }
           ]
         },
@@ -117,15 +117,6 @@ const baseConfig = defineConfig({
           ]
         },
         {
-          text: '四、底层实现',
-          collapsed: true,
-          items: [
-            { text: '后端平台架构解析', link: '/internals/backend-architecture' },
-            { text: 'JS SDK 内部实现', link: '/internals/jssdk-internals' },
-            { text: 'ChatUI 内部实现', link: '/internals/chatui-internals' }
-          ]
-        },
-        {
           text: '厂商指南',
           items: [
             { text: '厂商合作总览', link: '/vendor-guide/' },
@@ -139,24 +130,6 @@ const baseConfig = defineConfig({
           ]
         }
       ],
-      '/internals/': [
-        {
-          text: '底层实现',
-          items: [
-            { text: '后端平台架构解析', link: '/internals/backend-architecture' },
-            { text: 'JS SDK 内部实现', link: '/internals/jssdk-internals' },
-            { text: 'ChatUI 内部实现', link: '/internals/chatui-internals' }
-          ]
-        },
-        {
-          text: '返回集成开发',
-          items: [
-            { text: '集成方式总览', link: '/integration/overview' },
-            { text: '集成核心概念', link: '/integration/concepts' },
-            { text: 'REST API 参考', link: '/integration/rest-api' }
-          ]
-        }
-      ],
       '/vendor-guide/': [
         {
           text: '集成开发',
@@ -164,7 +137,7 @@ const baseConfig = defineConfig({
             { text: '集成方式总览', link: '/integration/overview' },
             { text: '集成核心概念', link: '/integration/concepts' },
             { text: 'JS SDK 集成', link: '/integration/jssdk' },
-            { text: 'ChatUI 前端集成与二次开发', link: '/integration/chatui' },
+            { text: '智能体前端集成与二次开发', link: '/integration/chatui' },
             { text: '集成代码示例', link: '/integration/examples' },
             { text: '认证与鉴权', link: '/integration/authentication' },
             { text: '流式对话 API（SSE）', link: '/integration/stream-api' },
@@ -172,15 +145,6 @@ const baseConfig = defineConfig({
             { text: '客户端工具协议', link: '/integration/client-tool-protocol' },
             { text: '技能注入机制', link: '/integration/skill-injection' },
             { text: 'REST API 参考', link: '/integration/rest-api' }
-          ]
-        },
-        {
-          text: '底层实现',
-          collapsed: true,
-          items: [
-            { text: '后端平台架构解析', link: '/internals/backend-architecture' },
-            { text: 'JS SDK 内部实现', link: '/internals/jssdk-internals' },
-            { text: 'ChatUI 内部实现', link: '/internals/chatui-internals' }
           ]
         },
         {
@@ -204,6 +168,7 @@ const baseConfig = defineConfig({
             { text: '技能是什么', link: '/skill-development/skill-basics' },
             { text: 'SKILL.md 编写规范', link: '/skill-development/skill-format' },
             { text: '技能生命周期', link: '/skill-development/skill-lifecycle' },
+            { text: '浏览器录制固化技能', link: '/skill-development/browser-recording-skill' },
             { text: 'MCP 工具开发', link: '/skill-development/mcp-tools' },
             { text: '客户端工具开发', link: '/skill-development/client-tools' },
             { text: '技能仓库与发布', link: '/skill-development/skill-repo' },

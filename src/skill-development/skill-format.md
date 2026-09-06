@@ -9,15 +9,24 @@
 ```
 my-skill/
 ├── SKILL.md          # 技能主文件（必须）
+├── scripts/          # 可执行脚本目录（可选）
+│   └── helper.py
 └── references/       # 参考资料目录（可选）
     └── api-notes.md
 ```
+
+`scripts/` 与 `references/` 是社区约定俗成的目录名：脚本放 `scripts/`，供 AI 按需读取的长文档放 `references/`（正文中引用路径即可，AI 需要时再读，避免撑爆上下文）。浏览器录制固化的技能包还会生成 `references/recording-data.json` 保存原始录制数据，见[浏览器录制固化技能](/skill-development/browser-recording-skill)。
 
 ## SKILL.md 格式
 
 ```markdown
 ---
 name: 技能名称
+description: 一句话说明什么场景下使用此技能
+category: general
+metadata:
+  request_types:
+    - agent
 ---
 
 # 技能正文
@@ -29,9 +38,16 @@ name: 技能名称
 
 | 字段 | 必填 | 说明 |
 |------|------|------|
-| `name` | ✅ | 技能的人类友好名称 |
-| `description` | ❌ | 技能摘要描述 |
-| `metadata` | ❌ | 元数据，如适用的 request_types |
+| `name` | ✅ | 技能的人类友好名称（支持中文、空格），写入 `client_skill_packages.name` |
+| `description` | 建议 | 场景导向的一句话描述（"当…时使用"），AI 靠它决定是否加载技能全文 |
+| `category` | ❌ | 分类标签，如 `browser`、`tools`、`general` |
+| `version` | ❌ | 语义化版本号，用于远程仓库更新检测 |
+| `metadata.request_types` | ❌ | 技能在哪些请求类型下可用：`agent` / `ask` / `plan`；缺省为全部可用 |
+| `metadata.requires.env` | ❌ | 技能依赖的环境变量键名列表，客户端执行工具时按白名单自动注入 |
+
+:::tip description 决定技能会不会被用
+渐进式披露机制下，AI 首先看到的是技能的 `name` + `description` 摘要，只有判断相关时才加载全文。description 写成"当用户需要 X 时使用此技能"比"本技能实现了 X 功能"触发准确率高得多。
+:::
 
 ## 正文编写要点
 

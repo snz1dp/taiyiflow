@@ -123,4 +123,3 @@ Flow 配置（提示词/模型/技能）支持导出下载，每次变更前导�
 
 - 协议细节 → [流式对话 API](/integration/stream-api)、[客户端工具协议](/integration/client-tool-protocol)
 - 用量与计费 → [计费与配额管理](/vendor-guide/billing-and-quota)
-- 源码级排查 → [后端平台架构解析](/internals/backend-architecture)

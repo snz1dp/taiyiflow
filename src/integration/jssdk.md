@@ -306,6 +306,5 @@ onUnmounted(() => sdk.value?.destroy())
 
 ## 深入阅读
 
-- SDK 内部架构与源码解析：[JS SDK 内部实现](/internals/jssdk-internals)
-- iframe 内对话页的定制与部署：[ChatUI 前端集成与二次开发](/integration/chatui)
+- iframe 内对话页的定制与部署：[智能体前端集成与二次开发](/integration/chatui)
 - 工具回调的服务端协议：[客户端工具协议](/integration/client-tool-protocol)

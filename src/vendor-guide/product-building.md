@@ -40,7 +40,7 @@ graph LR
 | **嵌入式对话** | JS SDK 引入，iframe 加载 ChatUI 对话页 | 产品里加 AI 助手窗口，最快上线 |
 | **API 后端集成** | 你的后端调用 `/api/v1/run/{flow}/stream`，前端自行渲染 | 需要完全自定义交互形态 |
 | **深度工具集成** | 上述任一 + 客户端工具协议 / MCP 工具 | AI 需要读写你的业务数据、执行业务操作 |
-| **白标整体产品** | 部署 ChatUI（Web / Electron）+ 品牌替换 | 推出独立的 AI 产品线 |
+| **白标整体产品** | 部署 ChatUI（Web / 桌面端）+ 品牌替换 | 推出独立的 AI 产品线 |
 
 :::tip 选型建议
 第一个版本永远从最简单的模式开始。「嵌入式对话 + 少量业务工具」能覆盖 80% 的首版需求，验证后再加深。
@@ -167,7 +167,7 @@ sdk.registerTool('order-server', {
 
 ### 白标 ChatUI（独立产品线）
 
-部署 ChatUI Web SPA 或构建 Electron 桌面端，替换品牌元素。完整定制点清单见[白标定制](/vendor-guide/white-label)。
+部署 ChatUI Web SPA 或构建桌面端，替换品牌元素。完整定制点清单见[白标定制](/vendor-guide/white-label)。
 
 ## 阶段五：测试验收
 
