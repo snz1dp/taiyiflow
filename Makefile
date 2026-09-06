@@ -42,7 +42,7 @@ build:
 
 # 使用 snz1dpctl 推送镜像
 push:
-	snz1dpctl make push
+	snz1dpctl make docker --push
 
 # 使用 snz1dpctl 部署组件
 deploy:
@@ -50,7 +50,7 @@ deploy:
 
 # 使用 snz1dpctl 构建并推送
 release:
-	snz1dpctl make build push
+	snz1dpctl make build publish
 
 # ============================================================
 # 清理
