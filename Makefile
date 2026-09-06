@@ -38,7 +38,7 @@ docs-preview:
 
 # 使用 snz1dpctl 构建镜像
 build:
-	snz1dpctl make build
+	snz1dpctl make docker
 
 # 使用 snz1dpctl 推送镜像
 push:
