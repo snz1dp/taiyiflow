@@ -171,7 +171,7 @@ Authorization: Bearer <token>
 | — | `/settings/tts/voices` | 系统音色管理 |
 | POST | `/agents/client/broadcast` | 跨渠道语音广播 |
 
-→ [语音相关接口参考](/reference/api/voice)
+→ [语音识别接口（ASR）](/reference/api/voice)、[语音对话接口](/reference/api/voice-dialogue)、[用户声纹接口](/reference/api/voiceprint)、[系统音色管理接口](/reference/api/tts-voices)
 
 ---
 

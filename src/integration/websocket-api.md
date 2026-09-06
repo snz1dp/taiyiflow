@@ -316,5 +316,7 @@ WS /api/v1/asr/websocket
 
 - [流式对话 API（SSE）](/integration/stream-api) — 文本对话推荐方式
 - [客户端工具协议](/integration/client-tool-protocol) — 协同通道上的工具下发
-- [语音相关接口](/reference/api/voice) — TTS / ASR / 声纹 REST 接口
+- [语音识别接口（ASR）](/reference/api/voice) — 实时/离线语音转写字段级参考
+- [语音对话接口](/reference/api/voice-dialogue) — 建连参数与默认配置
+- [用户声纹接口](/reference/api/voiceprint) / [系统音色管理接口](/reference/api/tts-voices)
 - [认证与鉴权](/integration/authentication) — WS 认证与关闭码 4001

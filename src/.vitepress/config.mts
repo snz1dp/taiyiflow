@@ -183,18 +183,29 @@ const baseConfig = defineConfig({
           items: [
             {
               text: 'API 接口文档',
+              collapsed: false,
               items: [
-                { text: '流式对话接口', link: '/reference/api/stream' },
+                { text: '流式对话接口速查', link: '/reference/api/stream' },
                 { text: '会话分组接口', link: '/reference/api/session' },
-                { text: '语音相关接口', link: '/reference/api/voice' },
+                { text: '用户提示词接口', link: '/reference/api/prompts' },
+                { text: '客户端定时任务接口', link: '/reference/api/client-schedules' },
+                { text: '内置技能客户端类型供应', link: '/reference/api/builtin-skills' },
                 { text: '运行时配置接口', link: '/reference/api/runtime-config' },
                 { text: '数据结构字典', link: '/reference/api/data-structures' }
               ]
             },
+            {
+              text: '语音接口文档',
+              collapsed: false,
+              items: [
+                { text: '语音识别接口（ASR）', link: '/reference/api/voice' },
+                { text: '语音对话接口', link: '/reference/api/voice-dialogue' },
+                { text: '用户声纹接口', link: '/reference/api/voiceprint' },
+                { text: '系统音色管理接口', link: '/reference/api/tts-voices' }
+              ]
+            },
             { text: '配置项参考', link: '/reference/config-reference' },
-            { text: '术语表', link: '/reference/glossary' },
-            { text: '更新日志', link: '/reference/changelog' },
-            { text: '服务与支持', link: '/reference/sla-and-support' }
+            { text: '术语表', link: '/reference/glossary' }
           ]
         }
       ]
