@@ -1,0 +1,68 @@
+# 部署文档站点到 GitHub Pages
+# 触发条件：推送到 main 分支的 src/ 目录变更，或手动触发
+# 注：需要 package-lock.json 存在于仓库中
+name: Deploy Docs to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - '.github/workflows/deploy-docs.yml'
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 权限以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许同时进行一次部署
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # 构建文档站点
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build VitePress site
+        run: npm run docs:build:gh
+        env:
+          VITEPRESS_BASE_PATH: /${{ github.event.repository.name }}/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: src/.vitepress/dist
+
+  # 部署到 GitHub Pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

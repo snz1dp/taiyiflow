@@ -3,6 +3,11 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 const basePath = process.env.VITEPRESS_BASE_PATH || '/taiyi/docs/'
 
+// 双渠道部署：
+// - 自有站点（默认）：base = '/taiyi/docs/'，导航包含指向站点根目录服务的「开始对话」「软件下载」
+// - GitHub Pages：base = '/taiyiflow/'（通过 VITEPRESS_BASE_PATH 注入），根目录服务不存在，隐藏这两个入口
+const isRootSite = basePath === '/taiyi/docs/'
+
 const baseConfig = defineConfig({
   title: '太乙智启',
   description: '太乙智启 — 自主可控的多智能体与 RAG 应用平台官方文档',
@@ -37,8 +42,13 @@ const baseConfig = defineConfig({
       { text: '参考手册', link: '/reference/api/stream' },
       // 「开始对话」「软件下载」指向站点根目录下的其它服务，
       // 不能走普通 link（会被 withBase 拼上 /taiyi/docs/），故用自定义组件渲染原生 <a>
-      { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyif/chat' } },
-      { component: 'RootNavLink', props: { text: '软件下载', href: '/taiyif/bundles/' } }
+      // 仅在自有站点部署时展示；GitHub Pages 上没有这些服务，予以隐藏
+      ...(isRootSite
+        ? [
+            { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyif/chat' } },
+            { component: 'RootNavLink', props: { text: '软件下载', href: '/taiyif/bundles/' } }
+          ]
+        : [])
     ],
 
     sidebar: {
