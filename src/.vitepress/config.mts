@@ -76,7 +76,7 @@ const baseConfig = defineConfig({
       ],
       '/scenarios/': [
         {
-          text: '场景方案',
+          text: '通用业务场景',
           items: [
             { text: '场景方案总览', link: '/scenarios/' },
             { text: '企业知识问答 / 智能客服', link: '/scenarios/intelligent-qa' },
@@ -89,6 +89,14 @@ const baseConfig = defineConfig({
             { text: '办公自动化 RPA', link: '/scenarios/office-rpa' },
             { text: '定时报告与监控播报', link: '/scenarios/scheduled-reports' },
             { text: '自定义场景搭建', link: '/scenarios/custom-scenario' }
+          ]
+        },
+        {
+          text: '专用工具场景',
+          items: [
+            { text: 'Blender 三维创作助手', link: '/scenarios/blender' },
+            { text: 'FreeCAD 参数化设计助手', link: '/scenarios/freecad' },
+            { text: 'Rhino 建筑与工业设计助手', link: '/scenarios/rhino' }
           ]
         }
       ],
