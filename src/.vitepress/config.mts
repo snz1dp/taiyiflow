@@ -45,8 +45,8 @@ const baseConfig = defineConfig({
       // 仅在自有站点部署时展示；GitHub Pages 上没有这些服务，予以隐藏
       ...(isRootSite
         ? [
-            { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyif/chat' } },
-            { component: 'RootNavLink', props: { text: '软件下载', href: '/taiyif/bundles/' } }
+            { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyi/chat' } },
+            { component: 'RootNavLink', props: { text: '软件下载', href: '/taiyi/bundles/' } }
           ]
         : [])
     ],

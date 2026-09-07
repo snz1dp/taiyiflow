@@ -8,7 +8,7 @@
  * href 原样输出，从根目录开始。
  *
  * 通过 nav 的 NavItemComponent 形式使用：
- *   { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyif/chat' } }
+ *   { component: 'RootNavLink', props: { text: '开始对话', href: '/taiyi/chat' } }
  *
  * 移动端抽屉菜单（VPNavScreenMenu）会额外传入 screen-menu 属性，
  * 据此切换为与 VPNavScreenMenuLink 一致的样式。
