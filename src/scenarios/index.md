@@ -26,7 +26,7 @@
 | 🎨 [Blender 三维创作助手](/scenarios/blender) | bpy 脚本生成、批量资产处理、着色器/几何节点、渲染管线自动化 | 三维美术、动画工作室、游戏团队 | ✅ 完整方案 |
 | 📐 [FreeCAD 参数化设计助手](/scenarios/freecad) | 参数化建模与改型、批量出图/BOM、宏与标准件库开发 | 机械设计、建筑设计、开源 CAD 用户 | ✅ 完整方案 |
 | 🏛 [Rhino 建筑与工业设计助手](/scenarios/rhino) | 批量几何生成、Grasshopper/Compute 参数化、图纸规范检查 | 建筑设计院、工业设计、幕墙顾问 | ✅ 完整方案 |
-| 🔌 [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration) | 接入社区现成 MCP 服务器或自研封装，驱动 Blender/FreeCAD/Rhino 及更多设计软件 | 上述场景的实施者、TD、平台管理员 | ✅ 完整方案 |
+| 🔌 [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration) | 接入社区现成 MCP 服务器或自研封装；含 12 个品类、80+ 专用软件生态盘点（BIM、机械 CAD、EDA、CAE 仿真、游戏引擎、影视 DCC、3D 打印、UI 创意、音频 DAW 等） | 上述场景的实施者、TD、平台管理员 | ✅ 完整方案 |
 
 ## 按角色选择
 
