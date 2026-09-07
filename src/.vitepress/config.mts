@@ -96,7 +96,8 @@ const baseConfig = defineConfig({
           items: [
             { text: 'Blender 三维创作助手', link: '/scenarios/blender' },
             { text: 'FreeCAD 参数化设计助手', link: '/scenarios/freecad' },
-            { text: 'Rhino 建筑与工业设计助手', link: '/scenarios/rhino' }
+            { text: 'Rhino 建筑与工业设计助手', link: '/scenarios/rhino' },
+            { text: '专用工具 MCP 对接开发', link: '/scenarios/tool-mcp-integration' }
           ]
         }
       ],

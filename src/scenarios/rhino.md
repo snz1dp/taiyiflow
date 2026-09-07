@@ -121,6 +121,10 @@ AI 生成脚本 → 在 Rhino 中执行 → 视口截图回传确认，方案推
 | 出图合规率 | 图纸规范检查一次通过比例 |
 | 方案推敲轮次 | 单日可完成的参数化改型迭代次数 |
 
+## 自定义工具对接搭建
+
+> 第 3 步是用现成 MCP 工具连接项目文件库、协同平台等周边系统。若要进一步把 Rhino 的脚本执行能力封装成自定义 MCP 工具，或直接接入社区现成的 Rhino / Grasshopper MCP 服务器（Rhino 内 socket 桥 / Rhino.Compute 无头方案），见独立章节 [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration)——含社区项目盘点、接入注册方式、自研封装骨架与安全注意事项。
+
 ## 效果参考
 
 | 指标 | 实施前 | 实施后（参考值） |
@@ -149,5 +153,7 @@ AI 生成脚本 → 在 Rhino 中执行 → 视口截图回传确认，方案推
 - [桌面客户端使用指南](/user-guide/desktop-app) — 桌面端智能体完整用法
 - [技能是什么](/skill-development/skill-basics) — 技能系统入门
 - [SKILL.md 编写规范](/skill-development/skill-format) — 沉淀图层标准与出图规范
-- [MCP 工具开发](/skill-development/mcp-tools) — 对接项目文件库与协同平台
+- [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration) — 社区 Rhino/Grasshopper MCP 盘点与自研封装
+- [MCP 工具开发](/skill-development/mcp-tools) — 封装自定义工具，对接项目文件库与协同平台
+- [客户端工具开发](/skill-development/client-tools) — 本地执行工具与回调协议
 - [定时报告与监控播报](/scenarios/scheduled-reports) — 定时批处理与播报任务

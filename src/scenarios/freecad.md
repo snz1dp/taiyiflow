@@ -120,6 +120,10 @@ AI 生成脚本 → 无头执行 → 输出重建日志与模型截图供确认�
 | 脚本一次通过率 | AI 生成脚本无需人工修改即可运行的比例 |
 | 模型合规率 | 入库检查通过率变化 |
 
+## 自定义工具对接搭建
+
+> 第 3 步是用现成 MCP 工具连接 PLM、文件库等周边系统。若要进一步把 FreeCAD 的脚本执行能力封装成自定义 MCP 工具，或直接接入社区现成的 FreeCAD MCP 服务器（GUI socket 模式 / freecadcmd 无头模式），见独立章节 [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration)——含社区项目盘点、接入注册方式、自研封装骨架与安全注意事项。
+
 ## 效果参考
 
 | 指标 | 实施前 | 实施后（参考值） |
@@ -148,5 +152,7 @@ AI 生成脚本 → 无头执行 → 输出重建日志与模型截图供确认�
 - [桌面客户端使用指南](/user-guide/desktop-app) — 桌面端智能体完整用法
 - [技能是什么](/skill-development/skill-basics) — 技能系统入门
 - [SKILL.md 编写规范](/skill-development/skill-format) — 沉淀设计规范与制图标准
-- [MCP 工具开发](/skill-development/mcp-tools) — 对接 PLM 与校核计算
+- [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration) — 社区 FreeCAD MCP 盘点与自研封装
+- [MCP 工具开发](/skill-development/mcp-tools) — 封装自定义工具，对接 PLM 与校核计算
+- [客户端工具开发](/skill-development/client-tools) — 本地执行工具与回调协议
 - [定时报告与监控播报](/scenarios/scheduled-reports) — 定时质检与播报任务

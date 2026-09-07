@@ -121,6 +121,10 @@ AI 生成脚本 → 后台执行 → 渲染预览图回传确认，迭代以分�
 | 管线覆盖率 | 已自动化环节占整条资产管线的比例 |
 | 资产规范符合率 | 抽检资产的命名/单位/层级合规比例 |
 
+## 自定义工具对接搭建
+
+> 第 3 步是用现成 MCP 工具连接素材库、渲染农场等周边系统。若要进一步把 Blender 的脚本执行能力封装成自定义 MCP 工具，或直接接入社区现成的 Blender MCP 服务器（addon + Socket 桥 / 无头执行两种模式），见独立章节 [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration)——含社区项目盘点、接入注册方式、自研封装骨架与安全注意事项。
+
 ## 效果参考
 
 | 指标 | 实施前 | 实施后（参考值） |
@@ -149,5 +153,7 @@ AI 生成脚本 → 后台执行 → 渲染预览图回传确认，迭代以分�
 - [桌面客户端使用指南](/user-guide/desktop-app) — 桌面端智能体完整用法
 - [技能是什么](/skill-development/skill-basics) — 技能系统入门
 - [SKILL.md 编写规范](/skill-development/skill-format) — 沉淀资产规范与管线约定
-- [MCP 工具开发](/skill-development/mcp-tools) — 对接素材库与渲染农场
+- [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration) — 社区 Blender MCP 盘点与自研封装
+- [MCP 工具开发](/skill-development/mcp-tools) — 封装自定义工具，对接素材库与渲染农场
+- [客户端工具开发](/skill-development/client-tools) — 本地执行工具与回调协议
 - [定时报告与监控播报](/scenarios/scheduled-reports) — 定时渲染与巡检任务
