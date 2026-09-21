@@ -125,6 +125,22 @@ AI 生成脚本 → 后台执行 → 渲染预览图回传确认，迭代以分�
 
 > 第 3 步是用现成 MCP 工具连接素材库、渲染农场等周边系统。若要进一步把 Blender 的脚本执行能力封装成自定义 MCP 工具，或直接接入社区现成的 Blender MCP 服务器（addon + Socket 桥 / 无头执行两种模式），见独立章节 [专用工具 MCP 对接开发](/scenarios/tool-mcp-integration)——含社区项目盘点、接入注册方式、自研封装骨架与安全注意事项。
 
+### Blender MCP 插件连接界面参考
+
+采用社区 Blender MCP 插件（addon + Socket 桥模式）时，在 Blender 内的连接操作如下：
+
+![Blender MCP 插件连接入口](../blender/1.png)
+
+在 Blender 视口中打开 `Blender MCP` 插件菜单，点击 `Connect to MCP server`（也可通过右侧 `BlenderMCP` 面板按钮触发），即可启动与 MCP 服务器的连接。菜单中还可按需勾选 Poly Haven、Sketchfab、Hyper3D Rodin、腾讯混元等外部资产来源。
+
+![连接成功后的状态](../blender/2.png)
+
+连接成功后，菜单项变为 `Disconnect from MCP server`，并提示 `Running on port 9876`（默认端口）。此时桌面端智能体即可通过该端口向 Blender 会话发送命令。
+
+![断开连接入口](../blender/3.png)
+
+需要停止服务时，在同一菜单中点击 `Disconnect from MCP server` 即可断开连接。
+
 ## 效果参考
 
 | 指标 | 实施前 | 实施后（参考值） |
